@@ -1,20 +1,32 @@
-// lab02.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Lab_02.1.cpp
+// < Мощук Мар'яна >
+// Лабораторна робота № 2.1
+// Лінійні програми.
+// Варіант 0.9
 
 #include <iostream>
+#include <cmath>
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_CTYPE, "ukr");
+
+    double alpha;
+    double betta;
+
+    cout << "Введiть значення alpha: " << endl;
+    cin >> alpha;
+
+    cout << "Введiть значення betta: " << endl;
+    cin >> betta;
+
+    double z1 = pow((cos(alpha) - cos(betta)), 2) - pow((sin(alpha) - sin(betta)), 2);
+    cout << "z1 = " << z1 << endl;
+
+    double z2 = -4 * pow(sin((alpha - betta) / 2), 2) * cos(alpha - betta);
+    cout << "z2 = " << z2 << endl;
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
